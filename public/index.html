@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <!--
+      在react当中，所有的逻辑都是在js中完成的，（包括页面结构的创建），如果想给当前页面倒入一些css样式或者img图片等内容，
+      我们有两种方式：
+      1、在js中基于es6 module模块规范，使用import导入，这样webpack在编译合并js
+      的时候，会把导入的资源文件等插入到页面到结构中，（绝对不能在js管控到结构中通过相对目录./或者../导入资源，因为在webpack编译到时候，地址就不是之前到相对地址了）
+
+      2、如果不想在js中导入，（js中导入到资源最后都会基于webpack编译），我们也可以把资源手动滚蛋在html中导入，但是在html最后也要基于webpack编译，导入的地址也不建议写相对地址，而是使用%PUBLIC_URL写成绝对地址
+
+      <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+      <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/reset.min.css">
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

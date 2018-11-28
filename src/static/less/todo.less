@@ -1,0 +1,44 @@
+.panel {
+    width: 500px;
+    margin: 20px auto;
+    .panel-title {
+        margin-bottom: 10px;
+        span {
+            font-weight: bold;
+            color: darkred;
+        }
+    }
+}
+.list-group-item {
+    position: relative;
+    input {
+        vertical-align: top;
+    }
+    span {
+      margin-left: 10px;
+      vertical-align: top;
+
+      &.complete {
+          text-decoration: line-through;
+      }
+    }
+    a {
+        position: absolute;
+        top:50%;
+        margin-top:-10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: none;
+    }
+
+    &:hover {
+        a {
+            display: block;
+        }
+    }
+
+}
